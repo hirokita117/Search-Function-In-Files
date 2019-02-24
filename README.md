@@ -57,7 +57,8 @@ Please select number:
 In this way, you can only retrieve methods that have the visibility of public defined.  
 （In this time, *_hogehugahoge* is excluded.）  
 When you enter the number of the function you want to search, the search begins.  
-The search range is lower than the current directory.
+The search range is lower than the current directory.  
+Files above the current directory are not searchable.
 
 ```bash
 Please select number:1
