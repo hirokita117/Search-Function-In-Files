@@ -45,7 +45,9 @@ class HogeController extends AppController
 If you use this script for this file, it looks like the following.
 
 ```bash
-$ ~/sfif.sh HogeController.php
+$ pwd
+/your/project/
+$ ~/sfif.sh app/Controller/HogeController.php
 1) huga
 2) hogehoge
 3) hugahuga
@@ -54,7 +56,8 @@ Please select number:
 
 In this way, you can only retrieve methods that have the visibility of public defined.  
 （In this time, *_hogehugahoge* is excluded.）  
-When you enter the number of the function you want to search, the search begins.
+When you enter the number of the function you want to search, the search begins.  
+The search range is lower than the current directory.
 
 ```bash
 Please select number:1
@@ -65,7 +68,7 @@ If you pass the second argument, it will not display more than that number of ch
 （*It can pass up to 999.*）
 
 ```bash
-$ ~/sfif.sh HogeController.php 20
+$ ~/sfif.sh app/Controller/HogeController.php 20
 1) huga
 2) hogehoge
 3) hugahuga
