@@ -13,6 +13,10 @@ For example, if you pass 300, only 300 letters will be displayed.
 This is useful when search results are too long.  
 The upper limit of the number that can be passed to the second argument is **999**.
 
+## Requirement
+**Shell type:** bash  
+**Version:** GNU bash, version 3.2.57
+
 # DEMO
 For example, let's say you want to examine a function in an file--**HogeController**.  
 In the HogeController, it is described as follows.
