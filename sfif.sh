@@ -15,6 +15,7 @@ function usage ()
 	echo ""
 	printf "\033[1mOverview:\033[m\n"
 	echo "  This script lists the functions described in the file, you can search by selecting one from the list."
+	echo "  You can only search for methods that have the visibility of public defined."
 	echo "  The search range is lower than the current directory."
 	echo "  By passing a number as the second argument, you can specify the number of output characters of the search result."
 	echo "  For example, if you pass 300, only 300 letters will be displayed."
