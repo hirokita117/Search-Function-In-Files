@@ -2,8 +2,6 @@
 
 ### set arguments ########################################################################
 COMMAND_NAME=$0
-CHECK_FILES=$1
-NUMBER_OF_EXTRACTS=$2
 i=0
 declare -a array=()
 ##########################################################################################
@@ -39,7 +37,7 @@ function usage ()
 ##########################################################################################
 
 ### check arguments ######################################################################
-if [ -z $CHECK_FILES ]; then
+if [ -z $1 ]; then
 	printf "Argument is missing.\nUsage: $COMMAND_NAME -h[--help]\n" 1>&2
 	exit 1
 fi
@@ -52,6 +50,7 @@ do
 			exit 1
 		;;
 		*.* )
+			CHECK_FILES=$1
 			if [ ! -e $CHECK_FILES ]; then
 				echo "This file does not exist." 1>&2
 				exit 1
@@ -60,6 +59,7 @@ do
 			shift 1
 		;;
 		[1-9] | [1-9][0-9] | [1-9][0-9][0-9] )
+			NUMBER_OF_EXTRACTS=$1
 			if [ -z $HAS_FILE ]; then
 				echo "The first argument, please specify the file." 1>&2
 				exit 1
