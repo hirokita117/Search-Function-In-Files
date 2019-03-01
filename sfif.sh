@@ -40,7 +40,7 @@ function usage ()
 
 ### check arguments ######################################################################
 if [ -z $CHECK_FILES ]; then
-	echo "Argument is missing." 1>&2
+	printf "Argument is missing.\nUsage: $COMMAND_NAME -h[--help]\n" 1>&2
 	exit 1
 fi
 
@@ -69,7 +69,7 @@ do
 		;;
 		* )
 			echo "Something is wrong."
-			echo "Usage: $COMMAND_NAME -h, --help"
+			echo "Usage: $COMMAND_NAME -h[--help]"
 			exit 1
 		;;
 	esac
