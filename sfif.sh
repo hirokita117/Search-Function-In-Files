@@ -47,12 +47,15 @@ do
 	case "$OPT" in
 		-h | --help )
 			usage
-			exit 1
+			exit 0
 		;;
 		*.* )
 			CHECK_FILES=$1
 			if [ ! -e $CHECK_FILES ]; then
 				echo "This file does not exist." 1>&2
+				exit 1
+			elif [ "$HAS_FILE" = "TRUE" ]; then
+				echo "Please select only one file." 1>&2
 				exit 1
 			fi
 			HAS_FILE="TRUE"
@@ -63,9 +66,11 @@ do
 			if [ -z $HAS_FILE ]; then
 				echo "The first argument, please specify the file." 1>&2
 				exit 1
+			elif [ "$IS_NUMBER" = "TRUE" ]; then
+				echo "Multiple output characters can not be set." 1>&2
+				exit 1
 			fi
 			IS_NUMBER="TRUE"
-			shift 1
 		;;
 		* )
 			echo "Something is wrong."
