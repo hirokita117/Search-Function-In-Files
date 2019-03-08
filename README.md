@@ -81,7 +81,7 @@ app/Controller/Piyo  #Display only 20 characters.
 ```bash
 $ cd /your/develop/directory
 $ git clone git@github.com:hiroaki510/Search-Function-In-Files.git
-$ cp sfif.sh ~/  #or  $mv sfif.sh ~/
+$ cp Search-Function-In-Files/sfif.sh ~/  #or  $mv sfif.sh ~/
 ```
 
 **Only this!**
